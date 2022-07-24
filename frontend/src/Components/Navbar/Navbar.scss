@@ -1,0 +1,80 @@
+@import "../../app.scss";
+
+.navbar{
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.513) 50%);
+    &.scroll{
+        background-color: var(--main-color);
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        .left-container{
+            display: flex;
+            align-items: center;
+            img{
+                height: 40px;
+                margin: 0 30px;
+                @include mobile {
+                    display: none;
+                }
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: large;
+                cursor: pointer;
+                @include tablet {
+                    display: none;
+                }
+                &.link{
+                    @include tablet {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .right-container{
+            display: flex;
+            align-items: center;
+            img{
+                height: 40px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .icon{
+                margin: 0 10px;
+                cursor: pointer;
+            }
+            .profile{
+                margin-right: 40px;
+                .options{
+                    display: none;
+                    button{
+                        background-color: var(--main-color);
+                        color: white;
+                        border: none;
+                        padding: 5px;
+                        cursor: pointer;
+                    }
+                }
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        background-color: var(--main-color);
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

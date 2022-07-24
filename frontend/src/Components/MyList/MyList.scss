@@ -1,0 +1,22 @@
+.listpage{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    .back{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin:10px 0 10px 30px;
+    }
+    .heading{
+        margin-left: 30px;
+    }
+    .wrapper{
+        position: static;
+        .mylist{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--main-color);
+        }
+    }
+}
